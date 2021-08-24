@@ -10,7 +10,7 @@ checkButton.addEventListener('click', function validateBillAndCashAmount() {
   hideMessage();
   if (billAmount.value > 0) {
     // 12
-    if (cashGiven.value >= billAmount.value) {
+    if (parseInt(cashGiven.value) >= parseInt(billAmount.value)) {
       // 2022> 12 => true
       const amountToBeReturned = cashGiven.value - billAmount.value; // 2022 - 12 = 2010
       calculateChange(amountToBeReturned);
